@@ -7,3 +7,7 @@ node "agent1.test.com" {
     content => "hi there",
   }
 }
+
+node "default" {
+
+}
