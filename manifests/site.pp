@@ -1,5 +1,5 @@
 
-node "default", "agent1.test.com", {
+node "default"{
 
 #Config file for NTPd
   file { "/etc/hi.txt":
@@ -7,4 +7,9 @@ node "default", "agent1.test.com", {
     content => "hi there",
   }
 
+}
+
+node /^agent\d/ { 
+  file {"/etc/hi.tt":
+    ensure => "present",
 }
