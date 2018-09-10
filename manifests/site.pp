@@ -6,10 +6,10 @@ node "default"{
     ensure  => "present",
     content => "hi there",
   }
-
 }
 
 node /^agent\d/ { 
   file {"/etc/hi.tt":
     ensure => "present",
+  }
 }
