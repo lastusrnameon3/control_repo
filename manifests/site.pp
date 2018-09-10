@@ -8,7 +8,7 @@ node "agent1.test.com" {
   }
 }
 
-node "default" {
+node "default", "agent1.test.com", {
 
 #Config file for NTPd
   file { "/etc/hi.txt":
