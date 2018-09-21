@@ -1,16 +1,9 @@
 
-node "default"{
-
-#Config file for NTPd
-  file { '/etc/hi.txt':
-    ensure  => 'present',
-    content => 'hi there 123',
-    owner   => 'root'
-  }
+node default{
 }
 
-node /^agent\d/ { 
-  file {"/etc/hi.txt":
-    ensure => "present",
-  }
+node 'puppetmaster.test.com' {
+  #Config for puppetmaster
+  include role::master_server
 }
+
