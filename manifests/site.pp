@@ -11,6 +11,6 @@ node /^web/ {
   include role::app_server
 }
 
-mode /^db/ {
+node /^db/ {
   include role::db_server
 }
